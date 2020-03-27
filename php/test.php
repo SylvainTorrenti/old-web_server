@@ -8,7 +8,7 @@
   <body>
     <h2>Page de test</h2>
     <p>
-      Cette page contient du code HTML. <br />
+      Cette page contient du code HTML. avec des balise php <br />
       Voici quelques petits test:
     </p>
     <ul>

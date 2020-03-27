@@ -9,6 +9,7 @@
     <h2>Page de test</h2>
     <p>
       Cette page contient du code HTML. avec des balise php <br />
+      <?php echo "Bonjour"; ?>
       Voici quelques petits test:
     </p>
     <ul>

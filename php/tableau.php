@@ -6,3 +6,4 @@ print_r($personne);
 foreach ($noms as $nom){
     echo '<p>' . $nom . '<p>';
 }
+?>

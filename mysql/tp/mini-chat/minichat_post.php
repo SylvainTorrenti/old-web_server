@@ -2,7 +2,7 @@
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=td;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=tp;charset=utf8', 'root', 'root');
 }
 catch(Exception $e)
 {
@@ -15,5 +15,5 @@ $req->execute(array($_POST['pseudo'], $_POST['message']));
 
 
 
-header('Location: minichat.php');
+header('location: minichat.php');
 ?>

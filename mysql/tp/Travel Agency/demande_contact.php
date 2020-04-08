@@ -22,7 +22,7 @@
 
             if (isset($_POST["name"]) and isset($_POST["mail"])) {
 
-                $req_insert_contact = $bdd->prepare('INSERT INTO liste_contact(nom, mail, date_contact, contact) VALUES(?, ?, NOW(), 1)');
+                $req_insert_contact = $bdd->prepare('INSERT INTO liste_contact(nom, mail, date_contact, contact) VALUES(?, ?, NOW(), "N")');
                 $req_insert_contact->execute(array(
                     $_POST["name"], $_POST["mail"]
                 ));

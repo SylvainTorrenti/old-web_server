@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +17,7 @@
 <body>
 
     <?php
+    
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=tp;charset=utf8', 'root', 'root');
     } catch (Exception $e) {
@@ -29,6 +33,8 @@
         while ($data = $requete_connexion->fetch()) {
             if ($_POST['id'] == $data['identifiant'] and $_POST['mdp'] == $data['mdp']) {
                 $connected = true;
+                $_SESSION['identifiant'] = $data['identifiant'];
+                $_SESSION['mdp'] = $data['mdp'];
             }
         }
     } else {
@@ -55,8 +61,11 @@
     }
 
     ?>
-
-
+    <p>
+    <form method="post" action="update.php">
+        <button type="submit">Envoi de mail</button>
+    </form>
+    </p>
 </body>
 
 </html>
